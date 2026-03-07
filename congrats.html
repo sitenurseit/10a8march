@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Құттықтау</title>
+<style>
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
+overflow-x:hidden;
+position:relative;
+}
+.card{
+background:rgba(255,255,255,0.95);
+max-width:750px;
+margin:70px auto;
+padding:45px;
+border-radius:25px;
+box-shadow:0 20px 50px rgba(0,0,0,0.25);
+position:relative;
+z-index:1;
+}
+h1{font-size:40px;color:#e91e63;}
+p{font-size:19px;line-height:1.8;color:#444;}
+button{display:none;}
+.invite-box{
+margin:35px 0;padding:25px;border-radius:18px;border:3px dashed #e91e63;
+background:linear-gradient(135deg,#fff0f5,#ffe4ec);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+font-size:20px;color:#c2185b;text-align:center;
+}
+.heart,.flower,.sparkle{
+position:fixed;top:-10vh;pointer-events:none;z-index:0;
+}
+@keyframes fall{to{transform:translateY(110vh);}}
+@keyframes sparkleAnim{0%{opacity:0; transform:translateY(0) scale(0);}50%{opacity:1; transform:translateY(50px) scale(1);}100%{opacity:0; transform:translateY(100px) scale(0);}}
+</style>
+</head>
+<body>
+
+<div class="card">
+<h1>🌸 Құттықтау 🌸</h1>
+<p>Сіздер біздің сыныптың көркі, қуанышы және ерекше сәнісіздер. Әрқайсыңыздың күлімсіреген жүздеріңіз, мейірімді жүректеріңіз және жарқын армандарыңыз сынып өмірін ерекше етеді.</p>
+<p>Осы тамаша мереке күні сіздерге зор денсаулық, шексіз бақыт, үлкен жетістіктер және орындалатын армандар тілейміз.</p>
+
+<div class="invite-box">
+🌷 ҚҰРМЕТТІ 10 "A" СЫНЫП ҚЫЗДАРЫ! 🌷<br>
+Сіздерді <b>09.03.2026</b> күні өтетін<br>
+мерекелік дастарханымыздың<br>
+қонағы болуға шын жүректен шақырамыз!<br>
+Келіп, бірге көңіл-күймен уақыт өткізейік!
+</div>
+
+<p>💐 Мерекелеріңіз құтты болсын! 💐<br>🌸 10 "A" сынып ұлдары атынан 🌸</p>
+</div>
+
+<script>
+function createHeart(){const heart=document.createElement("div");heart.className="heart";heart.innerHTML="💖";heart.style.left=Math.random()*100+"vw";heart.style.fontSize=Math.random()*20+15+"px";heart.style.animation=`fall ${Math.random()*3+4}s linear`;document.body.appendChild(heart);setTimeout(()=>heart.remove(),6000);}
+function createFlower(){const flower=document.createElement("div");flower.className="flower";flower.innerHTML="🌸";flower.style.left=Math.random()*100+"vw";flower.style.fontSize=Math.random()*20+20+"px";flower.style.animation=`fall ${Math.random()*4+5}s linear`;document.body.appendChild(flower);setTimeout(()=>flower.remove(),7000);}
+function createSparkle(){const s=document.createElement("div");s.className="sparkle";s.innerHTML="✨";s.style.left=Math.random()*100+"vw";s.style.fontSize=Math.random()*15+10+"px";s.style.animation=`sparkleAnim ${Math.random()*2+2}s linear`;document.body.appendChild(s);setTimeout(()=>s.remove(),3000);}
+setInterval(createHeart,400);
+setInterval(createFlower,900);
+setInterval(createSparkle,800);
+</script>
+
+</body>
+</html>
