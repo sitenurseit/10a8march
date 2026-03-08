@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Құттықтау</title>
+
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#fff9c4,#ffe082,#ffd54f);
+overflow-x:hidden;
+}
+
+/* карточка */
+
+.card{
+
+max-width:760px;
+margin:90px auto;
+padding:60px;
+
+background:#fffdf2;
+
+border-radius:25px;
+
+border:8px double #d4af37;
+
+box-shadow:
+0 0 30px rgba(212,175,55,0.7),
+0 20px 50px rgba(0,0,0,0.25);
+
+text-align:center;
+
+position:relative;
+
+}
+
+/* гүлдер */
+
+.card:before{
+content:"🌼";
+position:absolute;
+top:-35px;
+left:-35px;
+font-size:75px;
+}
+
+.card:after{
+content:"🌼";
+position:absolute;
+bottom:-35px;
+right:-35px;
+font-size:75px;
+}
+
+h1{
+font-size:40px;
+color:#b8860b;
+}
+
+p{
+font-size:19px;
+line-height:1.8;
+color:#6b4f00;
+}
+
+/* шақыру рамка */
+
+.invite-box{
+
+margin:40px 0;
+padding:35px;
+
+border-radius:20px;
+
+border:5px dashed #ffb300;
+
+background:linear-gradient(135deg,#fff8c6,#ffe082);
+
+box-shadow:
+0 0 20px rgba(255,193,7,0.8);
+
+font-size:22px;
+
+color:#6b4f00;
+
+}
+
+/* фото */
+
+.photo-box{
+
+display:flex;
+justify-content:center;
+margin-top:40px;
+
+}
+
+.photo-box img{
+
+width:400px;
+max-width:95%;
+
+border-radius:25px;
+
+border:8px double #d4af37;
+
+box-shadow:
+0 0 25px rgba(212,175,55,0.7),
+0 20px 40px rgba(0,0,0,0.3);
+
+transition:0.4s;
+
+}
+
+.photo-box img:hover{
+
+transform:scale(1.05);
+
+}
+
+/* конфетти */
+
+.confetti{
+position:fixed;
+top:-10px;
+width:10px;
+height:10px;
+background:gold;
+animation:fall linear;
+}
+
+@keyframes fall{
+
+to{
+transform:translateY(110vh);
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🌼 Құттықтау 🌼</h1>
+
+<p>
+
+Сіздер біздің сыныптың көркі, қуанышы және ерекше сәнісіздер.
+
+</p>
+
+<p>
+
+Осы мереке күні сіздерге зор денсаулық,  
+шексіз бақыт және орындалатын армандар тілейміз.
+
+</p>
+
+<div class="invite-box">
+
+🌷 ҚҰРМЕТТІ 10 "A" СЫНЫП ҚЫЗДАРЫ! 🌷  
+
+<br><br>
+
+Сіздерді  
+
+<b>09.03.2026</b> күні өтетін  
+
+мерекелік дастарханымыздың  
+
+қонағы болуға шақырамыз!
+
+</div>
+
+<div class="photo-box">
+
+<img src="girls.jpg">
+
+</div>
+
+<p>
+
+💐 Мерекелеріңіз құтты болсын! 💐  
+<br>
+🌟 10 "A" сынып ұлдары атынан 🌟
+
+</p>
+
+</div>
+
+<script>
+
+/* конфетти эффект */
+
+function confetti(){
+
+const c=document.createElement("div");
+
+c.className="confetti";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.animationDuration=Math.random()*3+2+"s";
+
+document.body.appendChild(c);
+
+setTimeout(()=>c.remove(),5000);
+
+}
+
+setInterval(confetti,200);
+
+</script>
+
+</body>
+</html>
